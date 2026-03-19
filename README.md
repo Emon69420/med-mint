@@ -1,15 +1,13 @@
-# reMedi
+# Medmint
 ### Chainging future of bio-medical research with AI
 
 Note- Open the website link in incognito mode if it doesn't open regularly, Browser security plays around with the website as it does not have a ssl
 
-reMedi is a beginner-friendly toolkit for drug discovery that uses some of the most advanced AI models for designing new compounds, like TamGen, chemBERTa, and DeepPurpose. It also includes smart tools for searching with graphs to find relations between existing entities (genes, proteins etc), understanding molecule structures, and using Perplexity Sonar API to proovide more context to the generated results making it more human interpretable and accelerating research
+MedMint is a beginner-friendly toolkit for drug discovery that uses some of the most advanced AI models for designing new compounds, like TamGen, chemBERTa, and DeepPurpose. It also includes smart tools for searching with graphs to find relations between existing entities (genes, proteins etc), understanding molecule structures, and using Perplexity Sonar API to proovide more context to the generated results making it more human interpretable and accelerating research
 
-reMedi streamlines the most resource-heavy and uncertain stages of early drug discovery — from identifying a viable target to generating and evaluating candidate compounds. This drastically reduces time, cost, and cognitive overhead for researchers, bridging gaps between silos and boosting the chances of clinical success.
+Medmint streamlines the most resource-heavy and uncertain stages of early drug discovery — from identifying a viable target to generating and evaluating candidate compounds. This drastically reduces time, cost, and cognitive overhead for researchers, bridging gaps between silos and boosting the chances of clinical success.
 
-Drug discovery takes around 10-15 years [Source: DiMasi, J. A., Grabowski, H. G., & Hansen, R. W. (2016). Innovation in the pharmaceutical industry: New estimates of R&D costs. Journal of Health Economics, 47, 20–33.] reMedi accelerates drug discovery by unifying the entire pipeline — from molecule creation to deep biological insight — into a single, intuitive system. It’s not just faster — it’s smarter, more connected, and built for the urgency of real-world healthcare, saving 3-5 years of development time and plans to save more in future iterations
-
-[presentation for reMedi](https://www.canva.com/design/DAGovBtkJQ4/3mdHofHrBqdXPDicauRQEA/edit?utm_content=DAGovBtkJQ4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+Drug discovery takes around 10-15 years [Source: DiMasi, J. A., Grabowski, H. G., & Hansen, R. W. (2016). Innovation in the pharmaceutical industry: New estimates of R&D costs. Journal of Health Economics, 47, 20–33.] MedMint accelerates drug discovery by unifying the entire pipeline — from molecule creation to deep biological insight — into a single, intuitive system. It’s not just faster — it’s smarter, more connected, and built for the urgency of real-world healthcare, saving 3-5 years of development time and plans to save more in future iterations
 
 Use the example of 2qwo (a protein related to DnaK protein, In pancreatic cancer, the protein DNAJA1 (which interacts with DnaK) has been found to be overexpressed, potentially impacting cancer cell survival and migration. The .cif files from the RCSB PDB database have been already added making generation much faster. Other protein’s compound generation may take 15minutes
 
@@ -50,8 +48,8 @@ docker compose up -d
 Create a conda environment
 
 ```
-conda create --n remedi python=3.11
-conda activate remedi
+conda create --n MedMint python=3.11
+conda activate MedMint
 ```
 
 Install requirements and the listed above requirements
@@ -116,7 +114,7 @@ The front end is built on React+Vite, install react-router-dom and everything wo
 the endpoints are setup just change the parent url according to your server ip (localhost or my gcp server), 
 ## Architecture
 
-reMedi is designed as a modular, multi-model system that brings together powerful tools for end-to-end drug discovery. Its flexible setup allows researchers to easily expand or customize the toolkit, as all core components and data connections are built in from the start.
+MedMint is designed as a modular, multi-model system that brings together powerful tools for end-to-end drug discovery. Its flexible setup allows researchers to easily expand or customize the toolkit, as all core components and data connections are built in from the start.
 
 1. **Core Modules**
 
@@ -134,22 +132,6 @@ reMedi is designed as a modular, multi-model system that brings together powerfu
    - **GraphRAG framework** Augments traditional RAG (Retrieval-Augmented Generation) methods by incorporating graph-based reasoning for biomedical data
    - **Ontological mapping**: Integrates structured biomedical ontologies (e.g., DrugBank, ChEMBL) to enhance retrieval and inference.
 
-4. **Perplexity Natural Language Interface**
-    
-    - **Perplexity Sonar Integration**
-      Allows researchers to ask natural language questions (e.g., “What compounds bind to the EGFR T790M mutation?”), which are translated into structured AQL (ArangoDB Query Language) queries using the Perplexity Sonar API.
 
-      it also provides context and insights to the result that help towards research in front end
-
-    - **LangChain Bridge**
-      reMedi connects Perplexity to the rest of the system via LangChain, enabling fluent conversion from plain English to executable queries over molecular, protein, or disease graphs.
-
-      Use Cases
-
-      Aids with deep research with proper citations
-
-      Convert natural language to graph queries
-
-      Provide more insights and context on results from backend to give the researchers some idea about the entity
 
 
