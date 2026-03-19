@@ -1,0 +1,24 @@
+# Ignore large data and model dumps
+arangoDump/
+checkpoints/
+TamGen_Demo_Data/
+data/
+
+# Python caching and environments
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+.venv
+env/
+*.pt
+*.pth
+
+# Node.js
+node_modules/
+remedi-frontend/node_modules/
+
+# OS generated files
+.DS_Store
+Thumbs.db
